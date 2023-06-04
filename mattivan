@@ -1,0 +1,184 @@
+matt ivan c sto domingo
+
+5.3
+/*NAME: MATT IVAN C. STO DOMINGO
+  DESCRIPTION: WORKING WITH WHILE STATEMENT
+  DATE:06/01/23*/
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int conversions, count;
+    double startValue, celsius, fahrenheit, increment;
+
+    cout << "Enter the starting Celsius value: ";
+    cin >> startValue;
+
+    cout << "Enter the number of conversions to be made: ";
+    cin >> conversions;
+
+    cout << "Enter the increment between Celsius values: ";
+    cin >> increment;
+
+    cout << "\nCELSIUS\t\tFAHRENHEIT\n";
+    cout << "------------------------\n";
+
+    celsius = startValue;
+    count = 0;
+
+    while (count < conversions) {
+        fahrenheit = (9.0 / 5.0) * celsius + 32.0;
+        cout << celsius << "\t\t" << fahrenheit << endl;
+        celsius += increment;
+        count++;
+    }
+
+    return 0;
+}
+
+
+
+
+
+
+5.4
+/*NAME: MATT IVAN C. STO DOMINGO
+  DESCRIPTION: WORKING WITH WHILE STATEMENT
+  DATE:06/01/23*/
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    double r, sum, term;
+    int a, n, i;
+
+    a = 1;    
+    r = 0.5;  
+    n = 10;      
+
+    sum = 0;
+    i = 0;
+    while (i < n) {
+        term = a * pow(r, i);
+        sum += term;
+        cout << "Term " << i + 1 << ": " << term << endl;
+        i++;
+    }
+
+    cout << "Sum of the geometric series: " << sum << endl;
+
+    return 0;
+}
+
+/*NAME: MATT IVAN C. STO DOMINGO
+  DESCRIPTION: WORKING WITH WHILE STATEMENT
+  DATE:06/01/23*/
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    double r, sum, term;
+    int a, n, i;
+
+    cout << "Enter the first term: ";
+    cin >> a;
+    cout << "Enter the common ratio: ";
+    cin >> r;
+    cout << "Enter the number of terms: ";
+    cin >> n;
+
+    sum = 0;
+    i = 0;
+    while (i < n) {
+        term = a * pow(r, i);
+        sum += term;
+        cout << "Term " << i + 1 << ": " << term << endl;
+        i++;
+    }
+
+    cout << "Sum of the geometric series: " << sum << endl;
+
+    return 0;
+}
+
+
+
+
+
+5.5
+/*NAME: MATT IVAN C. STO DOMINGO
+  DESCRIPTION: WORKING WITH WHILE STATEMENT
+  DATE:06/05/23*/
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    double fahrenheit, celsius;
+    int conversions, count;
+
+    cout << "Enter the initial Fahrenheit temperature: ";
+    cin >> fahrenheit;
+
+    cout << "Enter the total number of conversions to be made: ";
+    cin >> conversions;
+
+    cout << "\nFAHRENHEIT\t\tCELSIUS\n";
+    cout << "------------------------\n";
+
+    count = 0;
+    while (count <= conversions) {
+        celsius = (5.0 / 9.0) * (fahrenheit - 32.0);
+        cout << fahrenheit << "\t\t" << celsius << endl;
+
+        fahrenheit += 5.0;
+        count++;
+    }
+
+    return 0;
+}
+
+
+
+
+
+
+5.6
+/*NAME: MATT IVAN C. STO DOMINGO
+  DESCRIPTION: WORKING WITH WHILE STATEMENT
+  DATE:06/05/23*/
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    
+    int i, j;
+    double experiments[4][6] = {
+        {23.2, 31.0, 16.9, 27.5, 25.4, 28.6},
+        {34.8, 45.2, 27.9, 36.8, 33.4, 39.4},
+        {19.4, 16.8, 10.2, 20.8, 18.9, 13.4},
+        {36.9, 39.5, 49.2, 45.1, 42.7, 50.6}
+    };
+    double average, sum; 
+
+    i = 0;
+    while (i < 4) {
+        j = 0;
+        sum = 0.0;
+        while (j < 6) {
+            sum += experiments[i][j];
+            j++;
+        }
+        average = sum / 6;
+        cout << "Average of Experiment " << i + 1 << ": " << average << endl;
+        i++;
+    }
+
+    return 0;
+}
